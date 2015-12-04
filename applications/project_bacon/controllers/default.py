@@ -2456,7 +2456,10 @@ def game():
     """
     Individual game
     """
-    return dict()
+    game = db(db.games.id == request.args(0)).select().first()
+    rows = db().select(db.wordList.ALL)
+    d = [r.word for r in rows]
+    return dict(targetWord=game.targetWord, wordList=d)
 
 
 def add_game():
@@ -2473,9 +2476,7 @@ def load_games():
     """
     Loads the list of created games
     """
-    rows = db().select(
-        db.games.ALL
-    )
+    rows = db().select(db.games.ALL)
     d = {r.id: {'word': r.targetWord} for r in rows}
     return response.json(dict(games=d))
 
