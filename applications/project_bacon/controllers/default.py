@@ -2445,6 +2445,7 @@ def wordlist():
     return dict(wordList=d)
 
 
+
 def board():
     """
     List of playable games
@@ -2459,7 +2460,16 @@ def game():
     game = db(db.games.id == request.args(0)).select().first()
     rows = db().select(db.wordList.ALL)
     d = [r.word for r in rows]
-    return dict(targetWord=game.targetWord, wordList=d)
+    return dict(targetWord=game.targetWord)
+
+
+def load_wordlist():
+    """
+    Loads the list of words
+    """
+    rows = db().select(db.wordList.ALL)
+    d = [r.word for r in rows]
+    return response.json(dict(wordList=d))
 
 
 def add_game():

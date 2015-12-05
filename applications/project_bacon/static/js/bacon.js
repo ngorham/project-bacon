@@ -2,7 +2,7 @@
  * bacon.js
  * Purpose: Find a path from user chosen key word and target word
  * @author Neil Gorham ngorham2@gmail.com
- * @version 1.0 11/09/2015
+ * @version 1.1 12/04/2015
  */
 
 //WordNode constructor
@@ -12,7 +12,7 @@ function WordNode(data) {
 }
 
 //bacon constructor
-function Bacon(keyWord, targetWord) {
+function Bacon(keyWord, targetWord, data) {
     //member variables
     this.keyWord = keyWord.toLowerCase(); //user key word string
     this.targetWord = new WordNode(targetWord.toLowerCase()); //user target word
@@ -20,19 +20,17 @@ function Bacon(keyWord, targetWord) {
     this.container = []; //array of wordNode arrays
     this.path = []; //array of wordNodes of path from targetWord to keyWord
     this.searchStatus = false; //boolean of search results
-    this.load();
+    this.load(data);
     this.run();
 }
 
 Bacon.prototype = {
     constructor: Bacon,
 
-    //load the dictionary from a file
-    load: function(){
-        var lines = $('#wordList').html();
-        lines = lines.split('\n');
-        for(var i = 0; i <  lines.length; i++)
-            this.wList.push(new WordNode(lines[i].trim()));
+    //load the dictionary
+    load: function(data){
+        for(var i = 0; i < data.length; i++)
+            this.wList.push(new WordNode(data[i].trim().toLowerCase()));
     },
 
     //Main process
