@@ -2424,7 +2424,6 @@ WORDLIST=[
     'zloty'
 ]
 
-
 def index():
     """
     Splash page
@@ -2441,8 +2440,89 @@ def wordlist():
     """
     List of all words used in the game
     """
-    d = db().select(db.wordList.ALL).as_list()
-    return dict(wordList=d)
+    rows = db(db.wordList.id > 0).select(db.wordList.word)
+    word_list = [r.word for r in rows]
+    a = []
+    b = []
+    c = []
+    d = []
+    e = []
+    f = []
+    g = []
+    h = []
+    i = []
+    j = []
+    k = []
+    l = []
+    m = []
+    n = []
+    o = []
+    p = []
+    q = []
+    r = []
+    s = []
+    t = []
+    u = []
+    v = []
+    w = []
+    x = []
+    y = []
+    z = []
+    for word in word_list:
+        if word[0] == 'a':
+            a.append(word)
+        if word[0] == 'b':
+            b.append(word)
+        if word[0] == 'c':
+            c.append(word)
+        if word[0] == 'd':
+            d.append(word)
+        if word[0] == 'e':
+            e.append(word)
+        if word[0] == 'f':
+            f.append(word)
+        if word[0] == 'g':
+            g.append(word)
+        if word[0] == 'h':
+            h.append(word)
+        if word[0] == 'i':
+            i.append(word)
+        if word[0] == 'j':
+            j.append(word)
+        if word[0] == 'k':
+            k.append(word)
+        if word[0] == 'l':
+            l.append(word)
+        if word[0] == 'm':
+            m.append(word)
+        if word[0] == 'n':
+            n.append(word)
+        if word[0] == 'o':
+            o.append(word)
+        if word[0] == 'p':
+            p.append(word)
+        if word[0] == 'q':
+            q.append(word)
+        if word[0] == 'r':
+            r.append(word)
+        if word[0] == 's':
+            s.append(word)
+        if word[0] == 't':
+            t.append(word)
+        if word[0] == 'u':
+            u.append(word)
+        if word[0] == 'v':
+            v.append(word)
+        if word[0] == 'w':
+            w.append(word)
+        if word[0] == 'x':
+            x.append(word)
+        if word[0] == 'y':
+            y.append(word)
+        if word[0] == 'z':
+            z.append(word)
+    return dict(a=a, b=b, c=c, d=d, e=e, f=f, g=g, h=h, i=i, j=j, k=k, l=l, m=m,
+                n=n, o=o, p=p, q=q, r=r, s=s, t=t, u=u, v=v, w=w, x=x, y=y, z=z)
 
 
 def board():
@@ -2456,7 +2536,20 @@ def game():
     """
     Individual game
     """
-    return dict()
+    game = db(db.games.id == request.args(0)).select().first()
+    rows = db().select(db.wordList.ALL)
+    d = [r.word for r in rows]
+    return dict(targetWord=game.targetWord)
+
+
+def load_wordlist():
+    """
+    Loads the list of words
+    """
+    rows = db().select(db.wordList.ALL)
+    d = [r.word for r in rows]
+    return response.json(dict(wordList=d))
+
 
 
 def add_game():
@@ -2473,9 +2566,7 @@ def load_games():
     """
     Loads the list of created games
     """
-    rows = db().select(
-        db.games.ALL
-    )
+    rows = db().select(db.games.ALL)
     d = {r.id: {'word': r.targetWord} for r in rows}
     return response.json(dict(games=d))
 
