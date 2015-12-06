@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43922dc7-ed85-4c52-bec7-5da651a9d4f4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/applications/project_bacon/views/default/instructions.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/httpserver.pid" afterPath="$PROJECT_DIR$/httpserver.pid" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/applications/project_bacon/views/layout.html" afterPath="$PROJECT_DIR$/applications/project_bacon/views/layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parameters_8800.py" afterPath="$PROJECT_DIR$/parameters_8800.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="43922dc7-ed85-4c52-bec7-5da651a9d4f4" name="Default" comment="" />
     <ignored path="web2py.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
