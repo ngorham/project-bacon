@@ -1,0 +1,25 @@
+{{extend 'layout.html'}}
+<h2>Welcome</h2>
+<p>
+    Welcome to the Game of Bacon, a word guessing game. The goal is to guess a
+    key word that makes a &#8220;path&#8221; of words from the key word to the
+    target word by searching and linking words that have one letter difference
+    from the previous linked word to the key word and the target word. This
+    game is a variation of the
+    <a href="https://oracleofbacon.org/index.php">Oracle of Bacon</a>.
+    This game compares the characters of two strings to link words from the
+    key word to the target word instead of actors and movies.
+</p>
+<h2>How to Play</h2>
+<p>
+    In order to play, users must
+    <a href="{{=URL('default', 'user', args=['login'])}}">log in</a> or
+    <a href="{{=URL('default', 'user', args=['register'])}}">sign up</a>.
+    Once logged in, users are able to create a game by
+    selecting a target word from the
+    <a href="{{=URL('default', 'wordlist')}}">word list</a>.
+    To play, select a made game on the
+    <a href="{{=URL('default', 'board')}}">board</a> page. While on a game
+    page, users select and submit a key word. Upon submission the key word
+    makes a path to the target word.
+</p>
