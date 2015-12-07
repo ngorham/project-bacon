@@ -1,5 +1,6 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
-/* line 5, ../../../../../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+@import url(animate.css);
+/* line 5, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,69 +22,69 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
-/* line 1, ../sass/_main.scss */
+/* line 4, ../sass/_main.scss */
 .ui-autocomplete {
   max-height: 300px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
 
-/* line 7, ../sass/_main.scss */
+/* line 9, ../sass/_main.scss */
 .result-item {
   text-align: center;
   font-size: 30px;
 }
 
-/* line 13, ../sass/_main.scss */
+/* line 14, ../sass/_main.scss */
 #results {
   width: 50%;
   float: left;
 }
 
-/* line 17, ../sass/_main.scss */
+/* line 18, ../sass/_main.scss */
 .bacometer {
   float: right;
   width: 300px;
@@ -91,24 +92,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border-radius: 100%;
 }
 
-/* line 23, ../sass/_main.scss */
+/* line 24, ../sass/_main.scss */
 .message {
   font-size: 40px;
 }
 
-/* line 27, ../sass/_main.scss */
+/* line 28, ../sass/_main.scss */
 .loading {
   color: #963232;
   font-size: 20px;
 }
 
-/* line 32, ../sass/_main.scss */
+/* line 33, ../sass/_main.scss */
 body {
   padding-top: 15px;
   padding-left: 65px;
 }
 
-/* line 36, ../sass/_main.scss */
+/* line 37, ../sass/_main.scss */
 .navbar-twitch {
   position: fixed;
   top: 0px;
@@ -120,18 +121,18 @@ body {
   z-index: 1030;
 }
 
-/* line 46, ../sass/_main.scss */
+/* line 47, ../sass/_main.scss */
 .navbar-twitch.open {
   width: 240px;
 }
 
-/* line 49, ../sass/_main.scss */
+/* line 50, ../sass/_main.scss */
 .navbar-twitch > .container {
   padding: 0px;
   width: 100%;
 }
 
-/* line 53, ../sass/_main.scss */
+/* line 54, ../sass/_main.scss */
 .navbar-twitch .navbar-header,
 .navbar-twitch .navbar-brand {
   float: none;
@@ -140,23 +141,23 @@ body {
   margin: 0px;
 }
 
-/* line 60, ../sass/_main.scss */
+/* line 61, ../sass/_main.scss */
 .navbar-twitch .navbar-brand {
   height: 50px;
 }
 
-/* line 63, ../sass/_main.scss */
+/* line 64, ../sass/_main.scss */
 .navbar-twitch > .container .navbar-brand {
   padding: 0px;
   margin: 0px;
 }
 
-/* line 67, ../sass/_main.scss */
+/* line 68, ../sass/_main.scss */
 .navbar-twitch > .container .navbar-brand > .small-nav {
   display: block;
 }
 
-/* line 70, ../sass/_main.scss */
+/* line 71, ../sass/_main.scss */
 .navbar-twitch > .container .navbar-brand > .small-nav > span.logo,
 .navbar-twitch.open > .container .navbar-brand > .full-nav {
   display: block;
@@ -165,101 +166,101 @@ body {
   font-size: 18pt;
 }
 
-/* line 77, ../sass/_main.scss */
+/* line 78, ../sass/_main.scss */
 .navbar-twitch.open > .container .navbar-brand {
   width: 100%;
   padding: 15px 15px 60px;
   text-align: center;
 }
 
-/* line 82, ../sass/_main.scss */
+/* line 83, ../sass/_main.scss */
 .navbar-twitch.navbar-inverse > .container .navbar-brand > .small-nav > span.logo {
   /*color: rgb(255, 255, 255);*/
 }
 
-/* line 85, ../sass/_main.scss */
+/* line 86, ../sass/_main.scss */
 .navbar-twitch .navbar-nav > li {
   float: none;
 }
 
-/* line 88, ../sass/_main.scss */
+/* line 89, ../sass/_main.scss */
 .navbar-twitch > .container .full-nav {
   display: none;
 }
 
-/* line 91, ../sass/_main.scss */
+/* line 92, ../sass/_main.scss */
 .navbar-twitch.open > .container .full-nav {
   display: block;
 }
 
-/* line 94, ../sass/_main.scss */
+/* line 95, ../sass/_main.scss */
 .navbar-twitch.open > .container .small-nav {
   display: none;
 }
 
-/* line 97, ../sass/_main.scss */
+/* line 98, ../sass/_main.scss */
 .navbar-twitch .navbar-collapse {
   padding: 0px;
 }
 
-/* line 100, ../sass/_main.scss */
+/* line 101, ../sass/_main.scss */
 .navbar-twitch .navbar-nav {
   float: none;
   margin: 0px;
 }
 
-/* line 104, ../sass/_main.scss */
+/* line 105, ../sass/_main.scss */
 .navbar-twitch .navbar-nav > li > a {
   padding: 0px;
 }
 
-/* line 107, ../sass/_main.scss */
+/* line 108, ../sass/_main.scss */
 .navbar-twitch .navbar-nav > li > a > span {
   display: block;
   font-size: 16pt;
   padding: 13px 15px 13px 12px;
 }
 
-/* line 112, ../sass/_main.scss */
+/* line 113, ../sass/_main.scss */
 .navbar-twitch .tooltip,
 .navbar-twitch .tooltip .tooltip-inner {
   max-width: auto;
   white-space: nowrap;
 }
 
-/* line 117, ../sass/_main.scss */
+/* line 118, ../sass/_main.scss */
 .navbar-twitch-toggle {
   position: fixed;
   top: 5px;
   left: 55px;
 }
 
-/* line 122, ../sass/_main.scss */
+/* line 123, ../sass/_main.scss */
 .navbar-twitch ~ .navbar-twitch-toggle > .nav-open {
   display: inline-block;
 }
 
-/* line 125, ../sass/_main.scss */
+/* line 126, ../sass/_main.scss */
 .navbar-twitch ~ .navbar-twitch-toggle > .nav-close {
   display: none;
 }
 
-/* line 128, ../sass/_main.scss */
+/* line 129, ../sass/_main.scss */
 .navbar-twitch.open ~ .navbar-twitch-toggle {
   left: 245px;
 }
 
-/* line 131, ../sass/_main.scss */
+/* line 132, ../sass/_main.scss */
 .navbar-twitch.open ~ .navbar-twitch-toggle > .nav-open {
   display: none;
 }
 
-/* line 134, ../sass/_main.scss */
+/* line 135, ../sass/_main.scss */
 .navbar-twitch.open ~ .navbar-twitch-toggle > .nav-close {
   display: inline-block;
 }
 
-/* line 138, ../sass/_main.scss */
+/* line 139, ../sass/_main.scss */
 #imageonly {
   background-color: #9ddaf6;
   background-image: url("../images/egg.gif");
@@ -267,9 +268,49 @@ body {
   background-position: center;
 }
 
-/* line 144, ../sass/_main.scss */
+/* line 145, ../sass/_main.scss */
 .centered {
   position: relative;
-  left: 400px;
-  top: 450px;
+  text-align: center;
+  width: 100%;
+  top: 400px;
+}
+
+/* line 154, ../sass/_main.scss */
+h1 {
+  color: #ffbec0;
+  text-shadow: 0 0 5px #ff8d8d, 0 0 10px #ff8d8d, 0 0 20px #ff8d8d, 0 0 30px #ff8d8d, 0 0 40px #ff8d8d;
+  font-size: 450%;
+  text-align: center;
+  font-family: monospace;
+  margin-top: 50px;
+}
+
+/* line 165, ../sass/_main.scss */
+.gamesCont {
+  margin-top: 30px;
+}
+
+/* line 169, ../sass/_main.scss */
+#web2py_user_form {
+  margin-top: 30px;
+}
+
+/* line 172, ../sass/_main.scss */
+#web2py_user_form .form-control {
+  width: 70%;
+}
+
+/* line 175, ../sass/_main.scss */
+input {
+  border-radius: 8px;
+  border: 1px solid rbga(200, 200, 255, 0.9);
+  background-color: rbga(200, 200, 255, 0.4);
+}
+
+/* line 180, ../sass/_main.scss */
+#game_name {
+  width: 80%;
+  border: 1px solid rbga(200, 200, 255, 0.9);
+  background: rbga(200, 200, 255, 0.4);
 }
