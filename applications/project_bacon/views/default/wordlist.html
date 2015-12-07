@@ -1,5 +1,5 @@
 {{extend 'layout.html'}}
-<h1>Word List</h1>
+<h2>Word List</h2>
 <div id="wordList">
     <h3>'A' words</h3>
     <div>
@@ -217,14 +217,5 @@
             heightStyle: "content",
             icons: { "header": "ui-icon-plus", "activeHeader": "ui-icon-minus" }
         });
-
     });
-    (function(){
-
-        $('.site_nav_item').each(function(){
-            var $this =$(this);
-            if($this.data('id')=== "words"){$this.addClass('active');}
-        });
-
-    })();
 </script>

@@ -1,8 +1,8 @@
 {{extend 'layout.html'}}
 
-<h1>
+<h2>
 {{=T('Sign Up') if request.args(0) == 'register' else T('Log In') if request.args(0) == 'login' else T(request.args(0).replace('_',' ').title())}}
-</h1>
+</h2>
 
 <div class="container">
     <div class="row">
@@ -10,18 +10,14 @@
         {{
         if request.args(0)=='login':
             if not 'register' in auth.settings.actions_disabled:
-                form.add_button(T('Sign Up'),URL(args='register', vars={'_next': request.vars._next} if request.vars._next else None),_class='btn btn-info')
+                form.add_button(T('Sign Up'),URL(args='register', vars={'_next': request.vars._next} if request.vars._next else None),_class='btn btn-default')
             pass
             if not 'request_reset_password' in auth.settings.actions_disabled:
-                form.add_button(T('Lost Password'),URL(args='request_reset_password'),_class='btn btn-warning')
+                form.add_button(T('Lost Password'),URL(args='request_reset_password'),_class='btn btn-default')
             pass
-
         pass
-        form.add_button(T("Home"),URL('default','index'),_class='btn btn-success')
         =form
-
         }}
-
         </div>
     </div>
 </div>
