@@ -1,3 +1,6 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+@import url(animate.css);
+
 .ui-autocomplete{
     max-height:300px;
     overflow-y:scroll;
@@ -28,7 +31,7 @@
     color:rgba(150,50,50,1);
     font-size:20px;
 }
-@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
 body {
     padding-top: 15px;
     padding-left: 65px;
@@ -158,4 +161,30 @@ h1{
   font-size: 450%;
   text-align: center;
   font-family: monospace;
+  margin-top:50px;
 }
+
+.gamesCont{
+    margin-top:30px;
+}
+
+#web2py_user_form{
+    margin-top:30px;
+}
+#web2py_user_form .form-control{
+    width:70%;
+}
+input{
+    border-radius:8px;
+    border:1px solid rbga(200,200,255,.9);
+    background-color:rbga(200,200,255,.4);
+}
+#game_name{
+width:80%;
+border:1px solid rbga(200,200,255,.9);
+background:rbga(200,200,255,.4);
+}
+
+
+
+
