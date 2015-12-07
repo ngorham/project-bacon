@@ -9,7 +9,7 @@
         <div class="error" id="keyWordError" name="keyWordError"></div>
     </div>
     <div id="results"></div>
-    <img src="#" alt="" class="bacometer" />
+    <div class="bacometerCont"></div>
 </script>
 <script type="text/javascript" src="{{=URL('static', 'js', args=['bacon.js'])}}"></script>
 <script src="{{=URL('static', 'js/form-validate.js')}}"></script>
@@ -47,4 +47,17 @@
         var targetWord = ractive.get('targetWord');
         new Bacon(keyWord, targetWord, ractive.get('wordList'));
     });
+
+
+    (function(){
+
+    $('.site_nav_item').each(function(){
+        var $this =$(this);
+        if($this.data('id')=== "game"){$this.addClass('active');}
+
+    });
+
+    })();
+
+
 </script>

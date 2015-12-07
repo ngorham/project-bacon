@@ -23,3 +23,14 @@
     page, users select and submit a key word. Upon submission the key word
     makes a path to the target word.
 </p>
+
+<script>
+    (function(){
+
+    $('.site_nav_item').each(function(){
+        var $this = $(this);
+        if($this.data('id')=== "instructions"){$this.addClass('active');}
+    });
+
+    })();
+</script>
