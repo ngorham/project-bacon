@@ -83,48 +83,67 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 60%;
 }
 
-/* line 17, ../sass/_main.scss */
+/* line 16, ../sass/_main.scss */
+#create_game {
+  margin: 30px auto;
+  width: 90%;
+  text-align: center;
+}
+
+/* line 21, ../sass/_main.scss */
+#wordList {
+  margin-top: 30px;
+}
+
+/* line 24, ../sass/_main.scss */
+#game_name {
+  width: 60%;
+  border: 1px solid rbga(200, 200, 255, 0.9);
+  background: rbga(200, 200, 255, 0.4);
+}
+
+/* line 30, ../sass/_main.scss */
 .result-item {
   text-align: center;
   font-size: 30px;
   transition: .5s;
 }
 
-/* line 23, ../sass/_main.scss */
+/* line 36, ../sass/_main.scss */
 .result-item.list-group-item:hover {
   color: rbga(50, 50, 50, 1);
 }
 
-/* line 30, ../sass/_main.scss */
+/* line 43, ../sass/_main.scss */
 #message {
   text-align: center;
 }
 
-/* line 33, ../sass/_main.scss */
+/* line 46, ../sass/_main.scss */
 .bacometer {
   width: 300px;
   height: 300px;
   border-radius: 100%;
 }
 
-/* line 38, ../sass/_main.scss */
+/* line 51, ../sass/_main.scss */
 .message {
   font-size: 40px;
 }
 
-/* line 42, ../sass/_main.scss */
+/* line 55, ../sass/_main.scss */
 .loading {
   color: #963232;
   font-size: 20px;
 }
 
-/* line 47, ../sass/_main.scss */
+/* line 60, ../sass/_main.scss */
 body {
   padding-top: 15px;
   padding-left: 65px;
 }
 
-/* line 51, ../sass/_main.scss */
+/* line 64, ../sass/_main.scss */
 .navbar-twitch {
   position: fixed;
   top: 0px;
@@ -136,18 +155,18 @@ body {
   z-index: 1030;
 }
 
-/* line 61, ../sass/_main.scss */
+/* line 74, ../sass/_main.scss */
 .navbar-twitch.open {
   width: 240px;
 }
 
-/* line 64, ../sass/_main.scss */
+/* line 77, ../sass/_main.scss */
 .navbar-twitch > .container {
   padding: 0px;
   width: 100%;
 }
 
-/* line 68, ../sass/_main.scss */
+/* line 81, ../sass/_main.scss */
 .navbar-twitch .navbar-header,
 .navbar-twitch .navbar-brand {
   float: none;
@@ -156,23 +175,23 @@ body {
   margin: 0px;
 }
 
-/* line 75, ../sass/_main.scss */
+/* line 88, ../sass/_main.scss */
 .navbar-twitch .navbar-brand {
   height: 50px;
 }
 
-/* line 78, ../sass/_main.scss */
+/* line 91, ../sass/_main.scss */
 .navbar-twitch > .container .navbar-brand {
   padding: 0px;
   margin: 0px;
 }
 
-/* line 82, ../sass/_main.scss */
+/* line 95, ../sass/_main.scss */
 .navbar-twitch > .container .navbar-brand > .small-nav {
   display: block;
 }
 
-/* line 85, ../sass/_main.scss */
+/* line 98, ../sass/_main.scss */
 .navbar-twitch > .container .navbar-brand > .small-nav > span.logo,
 .navbar-twitch.open > .container .navbar-brand > .full-nav {
   display: block;
@@ -181,101 +200,101 @@ body {
   font-size: 18pt;
 }
 
-/* line 92, ../sass/_main.scss */
+/* line 105, ../sass/_main.scss */
 .navbar-twitch.open > .container .navbar-brand {
   width: 100%;
   padding: 15px 15px 60px;
   text-align: center;
 }
 
-/* line 97, ../sass/_main.scss */
+/* line 110, ../sass/_main.scss */
 .navbar-twitch.navbar-inverse > .container .navbar-brand > .small-nav > span.logo {
   /*color: rgb(255, 255, 255);*/
 }
 
-/* line 100, ../sass/_main.scss */
+/* line 113, ../sass/_main.scss */
 .navbar-twitch .navbar-nav > li {
   float: none;
 }
 
-/* line 103, ../sass/_main.scss */
+/* line 116, ../sass/_main.scss */
 .navbar-twitch > .container .full-nav {
   display: none;
 }
 
-/* line 106, ../sass/_main.scss */
+/* line 119, ../sass/_main.scss */
 .navbar-twitch.open > .container .full-nav {
   display: block;
 }
 
-/* line 109, ../sass/_main.scss */
+/* line 122, ../sass/_main.scss */
 .navbar-twitch.open > .container .small-nav {
   display: none;
 }
 
-/* line 112, ../sass/_main.scss */
+/* line 125, ../sass/_main.scss */
 .navbar-twitch .navbar-collapse {
   padding: 0px;
 }
 
-/* line 115, ../sass/_main.scss */
+/* line 128, ../sass/_main.scss */
 .navbar-twitch .navbar-nav {
   float: none;
   margin: 0px;
 }
 
-/* line 119, ../sass/_main.scss */
+/* line 132, ../sass/_main.scss */
 .navbar-twitch .navbar-nav > li > a {
   padding: 0px;
 }
 
-/* line 122, ../sass/_main.scss */
+/* line 135, ../sass/_main.scss */
 .navbar-twitch .navbar-nav > li > a > span {
   display: block;
   font-size: 16pt;
   padding: 13px 15px 13px 12px;
 }
 
-/* line 127, ../sass/_main.scss */
+/* line 140, ../sass/_main.scss */
 .navbar-twitch .tooltip,
 .navbar-twitch .tooltip .tooltip-inner {
   max-width: auto;
   white-space: nowrap;
 }
 
-/* line 132, ../sass/_main.scss */
+/* line 145, ../sass/_main.scss */
 .navbar-twitch-toggle {
   position: fixed;
   top: 5px;
   left: 55px;
 }
 
-/* line 137, ../sass/_main.scss */
+/* line 150, ../sass/_main.scss */
 .navbar-twitch ~ .navbar-twitch-toggle > .nav-open {
   display: inline-block;
 }
 
-/* line 140, ../sass/_main.scss */
+/* line 153, ../sass/_main.scss */
 .navbar-twitch ~ .navbar-twitch-toggle > .nav-close {
   display: none;
 }
 
-/* line 143, ../sass/_main.scss */
+/* line 156, ../sass/_main.scss */
 .navbar-twitch.open ~ .navbar-twitch-toggle {
   left: 245px;
 }
 
-/* line 146, ../sass/_main.scss */
+/* line 159, ../sass/_main.scss */
 .navbar-twitch.open ~ .navbar-twitch-toggle > .nav-open {
   display: none;
 }
 
-/* line 149, ../sass/_main.scss */
+/* line 162, ../sass/_main.scss */
 .navbar-twitch.open ~ .navbar-twitch-toggle > .nav-close {
   display: inline-block;
 }
 
-/* line 153, ../sass/_main.scss */
+/* line 166, ../sass/_main.scss */
 #imageonly {
   background-color: #9ddaf6;
   background-image: url("../images/egg.gif");
@@ -283,7 +302,7 @@ body {
   background-position: center;
 }
 
-/* line 159, ../sass/_main.scss */
+/* line 172, ../sass/_main.scss */
 .centered {
   position: relative;
   text-align: center;
@@ -291,7 +310,7 @@ body {
   top: 400px;
 }
 
-/* line 168, ../sass/_main.scss */
+/* line 181, ../sass/_main.scss */
 h1 {
   color: #ffbec0;
   text-shadow: 0 0 5px #ff8d8d, 0 0 10px #ff8d8d, 0 0 20px #ff8d8d, 0 0 30px #ff8d8d, 0 0 40px #ff8d8d;
@@ -301,31 +320,24 @@ h1 {
   margin-top: 50px;
 }
 
-/* line 179, ../sass/_main.scss */
+/* line 192, ../sass/_main.scss */
 .gamesCont {
   margin-top: 30px;
 }
 
-/* line 183, ../sass/_main.scss */
+/* line 196, ../sass/_main.scss */
 #web2py_user_form {
   margin-top: 30px;
 }
 
-/* line 186, ../sass/_main.scss */
+/* line 199, ../sass/_main.scss */
 #web2py_user_form .form-control {
   width: 70%;
 }
 
-/* line 189, ../sass/_main.scss */
+/* line 202, ../sass/_main.scss */
 input {
   border-radius: 8px;
   border: 1px solid rbga(200, 200, 255, 0.9);
   background-color: rbga(200, 200, 255, 0.4);
-}
-
-/* line 194, ../sass/_main.scss */
-#game_name {
-  width: 80%;
-  border: 1px solid rbga(200, 200, 255, 0.9);
-  background: rbga(200, 200, 255, 0.4);
 }
