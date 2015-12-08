@@ -39,6 +39,7 @@ Bacon.prototype = {
     run: function(){
         $(".bacometer").fadeOut();
         $results = $("#results");
+        $('#message').html("");
         $results.html("");
         $loading = $(document.createElement('p'));
         $loading.addClass("loading animate pulse infinite");
