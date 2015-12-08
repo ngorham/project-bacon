@@ -18,9 +18,12 @@ function Bacon(keyWord, targetWord, data) {
     //member variables
     this.keyWord = keyWord.toLowerCase(); //user key word string
     this.targetWord = new WordNode(targetWord.toLowerCase()); //user target word
+    self = this;
     this.wList = []; //array of dictionary of string words
     this.container = []; //array of wordNode arrays
     this.path = []; //array of wordNodes of path from targetWord to keyWord
+    this.alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M', 'N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+    this.alphabetScore = [1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10];
     this.searchStatus = false; //boolean of search results
     this.load(data);
     this.run();
@@ -150,15 +153,16 @@ Bacon.prototype = {
         $message = $('#message');
         $results.html("");
 
-        var text = '';
-        var txt = "";
-        var list;
         var baconHappy = true;
         var textNode = $(document.createElement('p'));
+        var list;
+        var text = '';
+        var txt = '';
+        var t;
+        var wordScoreEl;
         var score = 0;
         var wordScore = 0;
-        var alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M', 'N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-        var alphabetScore = [1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10];
+        var scoreInd;
 
         textNode.addClass("message");
         if(this.searchStatus) {
@@ -173,18 +177,18 @@ Bacon.prototype = {
             for (var i = this.path.length - 1; i >= 0; i--) {
                 txt = this.path[i].word.toLowerCase();
                 wordScore = 0;
-                for (var j = 0; j < alphabet.length; j++) {
-                    if (txt.indexOf(alphabet[j].toLowerCase()) > -1) {
-                        score += alphabetScore[j];
-                        wordScore += alphabetScore[j];
-                    }
+                for(var j = 0; j < txt.length; j++) {
+                    scoreInd = this.alphabet.indexOf(txt[j].toUpperCase());
+                    score += this.alphabetScore[scoreInd];
+                    wordScore += this.alphabetScore[scoreInd];
+
                 }
                 (function(i,text,wordSco){
                     setTimeout(function(){
                         listEl = $(document.createElement('li'));
                         listEl.addClass("result-item list-group-item list-group-item-info").addClass("bounceIn animated");
-                        var t = document.createTextNode(text);
-                        var wordScoreEl = $(document.createElement('span'));
+                        t = document.createTextNode(text);
+                        wordScoreEl = $(document.createElement('span'));
                         wordScoreEl.addClass('wordScore animated fadeOutUp');
                         wordScoreEl.append("+"+wordSco);
                         listEl.append(t);
@@ -208,18 +212,17 @@ Bacon.prototype = {
             for(var i = this.path.length - 1; i >= 0; i--){
                 txt = this.path[i].word.toLowerCase();
                 wordScore = 0;
-                for(var j = 0; j < alphabet.length; j++) {
-                    if(txt.indexOf(alphabet[j].toLowerCase()) > -1) {
-                        score += alphabetScore[j];
-                        wordScore += alphabetScore[j];
-                    }
+                for(var j = 0; j < txt.length; j++) {
+                    scoreInd = this.alphabet.indexOf(txt[j].toUpperCase());
+                    score += this.alphabetScore[scoreInd];
+                    wordScore += this.alphabetScore[scoreInd];
                 }
                 (function(i,text,wordSco){
                     setTimeout(function(){
                         listEl = $(document.createElement('li'));
                         listEl.addClass("result-item list-group-item list-group-item-info").addClass("bounceIn animated");
-                        var t = document.createTextNode(text);
-                        var wordScoreEl = $(document.createElement('span'));
+                        t = document.createTextNode(text);
+                        wordScoreEl = $(document.createElement('span'));
                         wordScoreEl.addClass('wordScore animated fadeOutUp');
                         wordScoreEl.append("+"+wordSco);
                         listEl.append(t);
@@ -236,5 +239,21 @@ Bacon.prototype = {
             $(".bacometer").attr('src',"../../static/images/kbsad"+rand+".jpg");
         $(".bacometer").fadeIn();
         $('#score').text("Score: "+score);
+
+        $.ajax("../send_score", {
+                method: 'POST',
+                data: {
+                    score: score,
+                    target:self.targetWord.word
+                },
+                success:function(data){
+                    console.log(self.targetWord.word);
+                },
+                error:function(e){
+                   console.log("error");
+                }
+
+            }
+        );
     }
 }

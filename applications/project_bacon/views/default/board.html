@@ -17,7 +17,7 @@
             <div class="col-md-3">
                     <div class="panel panel-info animated bounceIn">
                         <div class="panel-heading">    <a href="game/{% game_id %}"> {% word %}</a></div>
-                        <div class="panel-body">    <a href="game/{% game_id %}"> Play {% word %}</a></div>
+                        <div class="panel-body">    <a href="game/{% game_id %}"> HighScore: {% winner %}  {% highScore %}</a></div>
                     </div>
             </div>
 
@@ -29,7 +29,7 @@
             <div class="col-md-3">
                     <div class="panel panel-info animated bounceIn">
                         <div class="panel-heading">    <a href="game/{% game_id %}"> {% word %}</a></div>
-                        <div class="panel-body">    <a href="game/{% game_id %}"> Play {% word %}</a></div>
+                        <div class="panel-body">    <a href="game/{% game_id %}"> Play {% highScore %}</a></div>
                     </div>
             </div>
 
@@ -60,6 +60,7 @@
                     method: 'POST',
                     success: function(data){
                         ractive.set('games', data['games']);
+                        console.log(data['games']);
                     },
                     error: function(){}
                 }
