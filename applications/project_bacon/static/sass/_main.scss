@@ -13,6 +13,19 @@
 #play_game #keyWord{
     width:60%;
 }
+#create_game{
+    margin:30px auto;
+    width:90%;
+    text-align:center;
+}
+#wordList{
+    margin-top:30px;
+}
+#game_name{
+width:60%;
+border:1px solid rbga(200,200,255,.9);
+background:rbga(200,200,255,.4);
+}
 
 .result-item{
     text-align:center;
@@ -190,11 +203,6 @@ input{
     border-radius:8px;
     border:1px solid rbga(200,200,255,.9);
     background-color:rbga(200,200,255,.4);
-}
-#game_name{
-width:80%;
-border:1px solid rbga(200,200,255,.9);
-background:rbga(200,200,255,.4);
 }
 
 
