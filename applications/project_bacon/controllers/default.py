@@ -153,10 +153,9 @@ def add_game():
     return 'ok'
 
 def send_score():
-    highScore = db(db.games.word == request.vars.targetWord).select();
-    logger.debug(highScore)
-    if int(request.vars.score) > highScore:
-        db.games.update(db.games.targetWord == request.vars.targetWord,winner=auth.user_id, highScore = int(request.vars.score))
+    row = db(db.games.targetWord == request.vars.target).select(db.games.highScore).first()
+    if row is None or int(request.vars.score) > row.highScore:
+        db(db.games.targetWord == request.vars.target).update(winner=auth.user,winnerName = auth.user.first_name, highScore = int(request.vars.score), scoreDate = datetime.utcnow())
     return True;
 
 def load_games():
@@ -164,7 +163,7 @@ def load_games():
     Loads the list of created games
     """
     rows = db().select(db.games.ALL)
-    d = {r.id: {'word': r.targetWord} for r in rows}
+    d = {r.id: {'word': r.targetWord, 'highScore':r.highScore, 'winner':r.winnerName } for r in rows}
     return response.json(dict(games=d))
 
 

@@ -18,6 +18,7 @@ function Bacon(keyWord, targetWord, data) {
     //member variables
     this.keyWord = keyWord.toLowerCase(); //user key word string
     this.targetWord = new WordNode(targetWord.toLowerCase()); //user target word
+    self = this;
     this.wList = []; //array of dictionary of string words
     this.container = []; //array of wordNode arrays
     this.path = []; //array of wordNodes of path from targetWord to keyWord
@@ -176,7 +177,7 @@ Bacon.prototype = {
             for (var i = this.path.length - 1; i >= 0; i--) {
                 txt = this.path[i].word.toLowerCase();
                 wordScore = 0;
-                for(var j = 0; j < txt.length(); j++) {
+                for(var j = 0; j < txt.length; j++) {
                     scoreInd = this.alphabet.indexOf(txt[j].toUpperCase());
                     score += this.alphabetScore[scoreInd];
                     wordScore += this.alphabetScore[scoreInd];
@@ -238,18 +239,21 @@ Bacon.prototype = {
             $(".bacometer").attr('src',"../../static/images/kbsad"+rand+".jpg");
         $(".bacometer").fadeIn();
         $('#score').text("Score: "+score);
-        // 
-        //$.ajax("../send_score", {
-        //        method: 'POST',
-        //        data: {score: score},
-        //        success:function(data){
-        //            console.log("yoyo");
-        //        },
-        //        error:function(e){
-        //           console.log("error");
-        //        }
-        //
-        //    }
-        //);
+
+        $.ajax("../send_score", {
+                method: 'POST',
+                data: {
+                    score: score,
+                    target:self.targetWord.word
+                },
+                success:function(data){
+                    console.log(self.targetWord.word);
+                },
+                error:function(e){
+                   console.log("error");
+                }
+
+            }
+        );
     }
 }
