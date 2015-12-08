@@ -2,6 +2,7 @@
 {{extend 'layout.html'}}
 <div id="target"></div>
 <script id="template" type="text/ractive">
+{{if auth.user_id:}}
     <h1>Find a Path to {%targetWord%}</h1>
     <div class="container">
         <div id="play_game" class="col-md-12">
@@ -11,11 +12,16 @@
             <div class="error" id="keyWordError" name="keyWordError"></div>
         </div>
         <div id="message" class="col-md-12"></div>
+        <div id="score" class="col-md-12"></div>
         <div id="results" class="col-sm-8"></div>
         <div class="col-sm-4">
             <img class="bacometer"/>
         </div>
     </div>
+{{else:}}
+    <h1>Please Sign in to play a Game!</h1>
+        <div class="centered">{{=home_icon}}</div>
+{{pass}}
 </script>
 <script type="text/javascript" src="{{=URL('static', 'js', args=['bacon.js'])}}"></script>
 <script src="{{=URL('static', 'js/form-validate.js')}}"></script>
