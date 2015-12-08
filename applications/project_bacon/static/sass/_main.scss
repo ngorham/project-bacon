@@ -6,11 +6,24 @@
     overflow-y:scroll;
     overflow-x:hidden;
 }
+#play_game{
+    text-align:center;
+    margin:30px auto;
+}
+#play_game #keyWord{
+    width:60%;
+}
+
 .result-item{
     text-align:center;
     font-size:30px;
+    transition:.5s;
 
 }
+.result-item.list-group-item:hover{
+    color:rbga(50,50,50,1);
+}
+
 #results{
 
 }
