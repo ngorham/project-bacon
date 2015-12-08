@@ -2428,6 +2428,9 @@ def index():
     """
     Splash page
     """
+    if auth.user_id:
+        redirect(URL('default','board'))
+
     return dict()
 
 

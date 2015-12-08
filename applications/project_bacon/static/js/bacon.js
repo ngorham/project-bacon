@@ -1,3 +1,5 @@
+
+
 /**
  * bacon.js
  * Purpose: Find a path from user chosen key word and target word
@@ -143,6 +145,7 @@ Bacon.prototype = {
     //Print path from targetWord to keyWord
     print: function(){
             $results = $("#results");
+            $message = $('#message');
             $results.html("");
 
             var text = '';
@@ -156,16 +159,17 @@ Bacon.prototype = {
 
                 text = 'A path from ' + this.keyWord + ' to ' + this.targetWord.word;
                 textNode.append(text);
+                $message.append(textNode);
 
-                $results.append(textNode);
                 list = $(document.createElement('ul'));
                 $results.append(list);
+
                 for(var i = this.path.length - 1; i >= 0; i--){
                     var txt = this.path[i].word;
                     (function(i,text){
                         setTimeout(function(){
                             listEl = $(document.createElement('li'));
-                            listEl.addClass("result-item list-group-item").addClass("bounceIn animated");
+                            listEl.addClass("result-item list-group-item list-group-item-info").addClass("bounceIn animated");
                             var t = document.createTextNode(text);
                             listEl.append(t);
                             list.append(listEl);
@@ -176,13 +180,13 @@ Bacon.prototype = {
                 text += '</ul>\n';
                 console.log(text);
             }else{
-                text += 'Sorry! No path from ' + this.keyWord + ' to ' + this.targetWord.word + '<br >\n';
-                text += 'Closest Path\n';
                 baconHappy = false;
-
+                text += 'Sorry! No path from ' + this.keyWord + ' to ' + this.targetWord.word + '<br >\n';
+                text += 'Closest Path:\n';
                 textNode.append(text);
-                $results.append(textNode);
-                var list = $(document.createElement('ul'));
+                $message.append(textNode);
+
+                list = $(document.createElement('ul'));
                 list.addClass('result-list list-group');
                 $results.append(list);
 
@@ -191,7 +195,7 @@ Bacon.prototype = {
                     (function(i,text){
                         setTimeout(function(){
                             listEl = $(document.createElement('li'));
-                            listEl.addClass("result-item list-group-item").addClass("bounceIn animated");
+                            listEl.addClass("result-item list-group-item list-group-item-info").addClass("bounceIn animated");
                             var t = document.createTextNode(text);
                             listEl.append(t);
                             list.append(listEl);
@@ -199,10 +203,12 @@ Bacon.prototype = {
                     })(i,txt);
                 }
             }
+            var rand = Math.floor(Math.random()*3)+1;
             if(baconHappy)
-                $(".bacometer").attr('src',"../static/images/kbhappy.jpg")
+                $(".bacometer").attr('src',"../../static/images/kbhappy"+rand+".jpg");
             else
-                $(".bacometer").attr('src',"../static/images/kbsad.jpg")
+                $(".bacometer").attr('src',"../../static/images/kbsad"+rand+".jpg");
+//            console.log("YOYO");
             $(".bacometer").fadeIn();
     //        .html(text);.html(text);
         }

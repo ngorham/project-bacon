@@ -1,15 +1,21 @@
+
 {{extend 'layout.html'}}
 <div id="target"></div>
 <script id="template" type="text/ractive">
     <h1>Find a Path to {%targetWord%}</h1>
-    <div id="play_game">
-        Enter a key word
-        <input type="text" id="keyWord" value="{% keyWord %}" />
-        <input type="submit" value="Submit" id="keyWord_submit" class="btn btn-default" on-click="make_game" />
-        <div class="error" id="keyWordError" name="keyWordError"></div>
+    <div class="container">
+        <div id="play_game" class="col-md-12">
+            Enter a key word
+            <input type="text" id="keyWord" value="{% keyWord %}" />
+            <input type="submit" value="Submit" id="keyWord_submit" class="btn btn-default" on-click="make_game" />
+            <div class="error" id="keyWordError" name="keyWordError"></div>
+        </div>
+        <div id="message" class="col-md-12"></div>
+        <div id="results" class="col-md-8"></div>
+        <div class="col-md-4">
+            <img class="bacometer"/>
+        </div>
     </div>
-    <div id="results"></div>
-    <div class="bacometerCont"></div>
 </script>
 <script type="text/javascript" src="{{=URL('static', 'js', args=['bacon.js'])}}"></script>
 <script src="{{=URL('static', 'js/form-validate.js')}}"></script>
