@@ -179,19 +179,19 @@ Bacon.prototype = {
                         wordScore += alphabetScore[j];
                     }
                 }
-                (function (i, text) {
-                    setTimeout(function () {
+                (function(i,text,wordSco){
+                    setTimeout(function(){
                         listEl = $(document.createElement('li'));
                         listEl.addClass("result-item list-group-item list-group-item-info").addClass("bounceIn animated");
                         var t = document.createTextNode(text);
                         var wordScoreEl = $(document.createElement('span'));
                         wordScoreEl.addClass('wordScore animated fadeOutUp');
-                        wordScoreEl.append("+" + wordSco);
+                        wordScoreEl.append("+"+wordSco);
                         listEl.append(t);
                         listEl.append(wordScoreEl);
                         list.append(listEl);
-                    }, 300 * i);
-                })(i, txt);
+                     },400*i);
+                })(i,txt, wordScore);
             }
             score = score*5;
         }else{
