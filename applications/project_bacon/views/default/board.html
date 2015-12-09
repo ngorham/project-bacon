@@ -17,7 +17,12 @@
             <div class="col-md-3">
                     <div class="panel panel-info animated bounceIn">
                         <div class="panel-heading">    <a href="game/{% game_id %}"> {% word %}</a></div>
-                        <div class="panel-body">    <a href="game/{% game_id %}"> HighScore: {% winner %}  {% highScore %}</a></div>
+                        <div class="panel-body">    <a href="game/{% game_id %}"> HighScore: {% winner %}  {% highScore %} on
+                        <time class="pubdate" datetime="" pubdate>
+                            {% scoreDate %}
+                        </time>
+                        <div class="dateLastPlayed">Last Played: {% lastPlayed %}</div>
+                        </a></div>
                     </div>
             </div>
 
@@ -29,7 +34,7 @@
             <div class="col-md-3">
                     <div class="panel panel-info animated bounceIn">
                         <div class="panel-heading">    <a href="game/{% game_id %}"> {% word %}</a></div>
-                        <div class="panel-body">    <a href="game/{% game_id %}"> Play {% highScore %}</a></div>
+                        <div class="panel-body">    <a href="game/{% game_id %}"> HighScore: {% winner %}  {% highScore %} on {% scoreDate %}</a></div>
                     </div>
             </div>
 
@@ -48,8 +53,9 @@
             games: {},
             game_names: [],
             active_game_name: ''
-        }
+        },
     });
+
 
     //Loads the list of games
     function update(){
@@ -60,7 +66,7 @@
                     method: 'POST',
                     success: function(data){
                         ractive.set('games', data['games']);
-                        console.log(data['games']);
+
                     },
                     error: function(){}
                 }
@@ -92,7 +98,6 @@
                     method: 'POST',
                     success: function(){
                         var games = ractive.get('games');
-                        console.log(games);
                         if(game_id in games){
                             //do nothing
                         } else {
@@ -125,9 +130,11 @@
 
     $('.site_nav_item').each(function(){
         var $this =$(this);
-        if($this.data('id')=== "game"){$this.addClass('active');console.log("wtf");}
-        else{console.log("yoyo")}
+        if($this.data('id')=== "game"){$this.addClass('active');}
+
     });
+
+
 
     })();
 

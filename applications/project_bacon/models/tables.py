@@ -14,7 +14,7 @@ db.define_table('games',
                 Field("createdBy", db.auth_user, default = auth.user_id),
                 Field("creatorName"),
                 Field("createdOn", 'datetime', default = datetime.utcnow()),
-                Field("lastPlayed", 'datetime', default = datetime.utcnow())
+                Field("lastPlayed", 'datetime')
                 )
 
 db.games.createdBy.readable = db.games.createdBy.writable = False
