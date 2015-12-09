@@ -129,36 +129,36 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-left: 10px;
 }
 
-/* line 54, ../sass/_main.scss */
+/* line 51, ../sass/_main.scss */
 #message {
   text-align: center;
 }
 
-/* line 57, ../sass/_main.scss */
+/* line 54, ../sass/_main.scss */
 .bacometer {
   width: 300px;
   height: 300px;
   border-radius: 100%;
 }
 
-/* line 62, ../sass/_main.scss */
+/* line 59, ../sass/_main.scss */
 .message {
   font-size: 40px;
 }
 
-/* line 66, ../sass/_main.scss */
+/* line 63, ../sass/_main.scss */
 .loading {
   color: #963232;
   font-size: 20px;
 }
 
-/* line 71, ../sass/_main.scss */
+/* line 68, ../sass/_main.scss */
 body {
   padding-top: 15px;
   padding-left: 65px;
 }
 
-/* line 75, ../sass/_main.scss */
+/* line 72, ../sass/_main.scss */
 .navbar-twitch {
   position: fixed;
   top: 0px;
@@ -170,18 +170,18 @@ body {
   z-index: 1030;
 }
 
-/* line 85, ../sass/_main.scss */
+/* line 82, ../sass/_main.scss */
 .navbar-twitch.open {
   width: 240px;
 }
 
-/* line 88, ../sass/_main.scss */
+/* line 85, ../sass/_main.scss */
 .navbar-twitch > .container {
   padding: 0px;
   width: 100%;
 }
 
-/* line 92, ../sass/_main.scss */
+/* line 89, ../sass/_main.scss */
 .navbar-twitch .navbar-header,
 .navbar-twitch .navbar-brand {
   float: none;
@@ -190,23 +190,23 @@ body {
   margin: 0px;
 }
 
-/* line 99, ../sass/_main.scss */
+/* line 96, ../sass/_main.scss */
 .navbar-twitch .navbar-brand {
   height: 50px;
 }
 
-/* line 102, ../sass/_main.scss */
+/* line 99, ../sass/_main.scss */
 .navbar-twitch > .container .navbar-brand {
   padding: 0px;
   margin: 0px;
 }
 
-/* line 106, ../sass/_main.scss */
+/* line 103, ../sass/_main.scss */
 .navbar-twitch > .container .navbar-brand > .small-nav {
   display: block;
 }
 
-/* line 109, ../sass/_main.scss */
+/* line 106, ../sass/_main.scss */
 .navbar-twitch > .container .navbar-brand > .small-nav > span.logo,
 .navbar-twitch.open > .container .navbar-brand > .full-nav {
   display: block;
@@ -215,101 +215,101 @@ body {
   font-size: 18pt;
 }
 
-/* line 116, ../sass/_main.scss */
+/* line 113, ../sass/_main.scss */
 .navbar-twitch.open > .container .navbar-brand {
   width: 100%;
   padding: 15px 15px 60px;
   text-align: center;
 }
 
-/* line 121, ../sass/_main.scss */
+/* line 118, ../sass/_main.scss */
 .navbar-twitch.navbar-inverse > .container .navbar-brand > .small-nav > span.logo {
   /*color: rgb(255, 255, 255);*/
 }
 
-/* line 124, ../sass/_main.scss */
+/* line 121, ../sass/_main.scss */
 .navbar-twitch .navbar-nav > li {
   float: none;
 }
 
-/* line 127, ../sass/_main.scss */
+/* line 124, ../sass/_main.scss */
 .navbar-twitch > .container .full-nav {
   display: none;
 }
 
-/* line 130, ../sass/_main.scss */
+/* line 127, ../sass/_main.scss */
 .navbar-twitch.open > .container .full-nav {
   display: block;
 }
 
-/* line 133, ../sass/_main.scss */
+/* line 130, ../sass/_main.scss */
 .navbar-twitch.open > .container .small-nav {
   display: none;
 }
 
-/* line 136, ../sass/_main.scss */
+/* line 133, ../sass/_main.scss */
 .navbar-twitch .navbar-collapse {
   padding: 0px;
 }
 
-/* line 139, ../sass/_main.scss */
+/* line 136, ../sass/_main.scss */
 .navbar-twitch .navbar-nav {
   float: none;
   margin: 0px;
 }
 
-/* line 143, ../sass/_main.scss */
+/* line 140, ../sass/_main.scss */
 .navbar-twitch .navbar-nav > li > a {
   padding: 0px;
 }
 
-/* line 146, ../sass/_main.scss */
+/* line 143, ../sass/_main.scss */
 .navbar-twitch .navbar-nav > li > a > span {
   display: block;
   font-size: 16pt;
   padding: 13px 15px 13px 12px;
 }
 
-/* line 151, ../sass/_main.scss */
+/* line 148, ../sass/_main.scss */
 .navbar-twitch .tooltip,
 .navbar-twitch .tooltip .tooltip-inner {
   max-width: auto;
   white-space: nowrap;
 }
 
-/* line 156, ../sass/_main.scss */
+/* line 153, ../sass/_main.scss */
 .navbar-twitch-toggle {
   position: fixed;
   top: 5px;
   left: 55px;
 }
 
-/* line 161, ../sass/_main.scss */
+/* line 158, ../sass/_main.scss */
 .navbar-twitch ~ .navbar-twitch-toggle > .nav-open {
   display: inline-block;
 }
 
-/* line 164, ../sass/_main.scss */
+/* line 161, ../sass/_main.scss */
 .navbar-twitch ~ .navbar-twitch-toggle > .nav-close {
   display: none;
 }
 
-/* line 167, ../sass/_main.scss */
+/* line 164, ../sass/_main.scss */
 .navbar-twitch.open ~ .navbar-twitch-toggle {
   left: 245px;
 }
 
-/* line 170, ../sass/_main.scss */
+/* line 167, ../sass/_main.scss */
 .navbar-twitch.open ~ .navbar-twitch-toggle > .nav-open {
   display: none;
 }
 
-/* line 173, ../sass/_main.scss */
+/* line 170, ../sass/_main.scss */
 .navbar-twitch.open ~ .navbar-twitch-toggle > .nav-close {
   display: inline-block;
 }
 
-/* line 177, ../sass/_main.scss */
+/* line 174, ../sass/_main.scss */
 #imageonly {
   background-color: #9ddaf6;
   background-image: url("../images/egg.gif");
@@ -317,7 +317,7 @@ body {
   background-position: center;
 }
 
-/* line 183, ../sass/_main.scss */
+/* line 180, ../sass/_main.scss */
 .centered {
   position: relative;
   text-align: center;
@@ -325,7 +325,7 @@ body {
   top: 400px;
 }
 
-/* line 192, ../sass/_main.scss */
+/* line 189, ../sass/_main.scss */
 h1 {
   color: #ffbec0;
   text-shadow: 0 0 5px #ff8d8d, 0 0 10px #ff8d8d, 0 0 20px #ff8d8d, 0 0 30px #ff8d8d, 0 0 40px #ff8d8d;
@@ -335,22 +335,22 @@ h1 {
   margin-top: 50px;
 }
 
-/* line 203, ../sass/_main.scss */
+/* line 200, ../sass/_main.scss */
 .gamesCont {
   margin-top: 30px;
 }
 
-/* line 207, ../sass/_main.scss */
+/* line 204, ../sass/_main.scss */
 #web2py_user_form {
   margin-top: 30px;
 }
 
-/* line 210, ../sass/_main.scss */
+/* line 207, ../sass/_main.scss */
 #web2py_user_form .form-control {
   width: 70%;
 }
 
-/* line 213, ../sass/_main.scss */
+/* line 210, ../sass/_main.scss */
 input {
   border-radius: 8px;
   border: 1px solid rbga(200, 200, 255, 0.9);
