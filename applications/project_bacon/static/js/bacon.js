@@ -48,7 +48,7 @@ Bacon.prototype = {
         $loading = $(document.createElement('p'));
         $loading.addClass("loading animate pulse infinite");
         $results.append($loading);
-        console.log('run called');
+
         var first = []; //empty array of wordNodes
         first.push(new WordNode(this.keyWord));
         this.removeFromWordList(this.keyWord);
@@ -247,10 +247,10 @@ Bacon.prototype = {
                     target:self.targetWord.word
                 },
                 success:function(data){
-                    console.log(self.targetWord.word);
+
                 },
                 error:function(e){
-                   console.log("error");
+
                 }
 
             }

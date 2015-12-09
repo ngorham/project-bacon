@@ -148,14 +148,26 @@ def add_game():
     Adds a game to the database
     Removes a game name from the database
     """
-    db.games.update_or_insert(targetWord = request.vars.targetWord)
+    db.games.update_or_insert(
+        targetWord = request.vars.targetWord
+    )
     db(db.game_names.word == request.vars.targetWord).delete()
     return 'ok'
 
 def send_score():
     row = db(db.games.targetWord == request.vars.target).select(db.games.highScore).first()
     if row is None or int(request.vars.score) > row.highScore:
-        db(db.games.targetWord == request.vars.target).update(winner=auth.user,winnerName = auth.user.first_name, highScore = int(request.vars.score), scoreDate = datetime.utcnow())
+        db(db.games.targetWord == request.vars.target).update(
+            winner=auth.user,
+            winnerName = auth.user.first_name,
+            highScore = int(request.vars.score),
+            scoreDate = datetime.utcnow(),
+            lastPlayed = datetime.utcnow()
+        )
+    else:
+        db(db.games.targetWord == request.vars.target).update(
+            lastPlayed = datetime.utcnow()
+        )
     return True;
 
 def load_games():
@@ -163,7 +175,7 @@ def load_games():
     Loads the list of created games
     """
     rows = db().select(db.games.ALL)
-    d = {r.id: {'word': r.targetWord, 'highScore':r.highScore, 'winner':r.winnerName } for r in rows}
+    d = {r.id: {'word': r.targetWord, 'highScore':r.highScore, 'winner':r.winnerName, "scoreDate":r.scoreDate, 'lastPlayed':r.lastPlayed } for r in rows}
     return response.json(dict(games=d))
 
 
