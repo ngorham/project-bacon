@@ -175,7 +175,7 @@ def load_games():
     Loads the list of created games
     """
     rows = db().select(db.games.ALL)
-    d = {r.id: {'word': r.targetWord, 'highScore':r.highScore, 'winner':r.winnerName, "scoreDate":r.scoreDate, 'lastPlayed':r.lastPlayed } for r in rows}
+    d = {r.id: {'word': r.targetWord, 'highScore':r.highScore, 'winner':r.winnerName, "scoreDate": str(r.scoreDate)[:10], 'lastPlayed':str(r.lastPlayed)[:10] } for r in rows}
     return response.json(dict(games=d))
 
 
