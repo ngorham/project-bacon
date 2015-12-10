@@ -14,7 +14,7 @@
 
     <div class="container gamesCont">
             {% #games: game_id %}
-            <div class="col-md-3">
+            <div class="col-md-4">
                     <div class="panel panel-info animated bounceIn">
                         <div class="panel-heading">    <a href="game/{% game_id %}"> {% word %}</a></div>
                         <div class="panel-body">    <a href="game/{% game_id %}"> HighScore: {% winner %}  {% highScore %} on
@@ -31,7 +31,7 @@
     {{else:}}
        <div class="container gamesCont">
             {% #games: game_id %}
-            <div class="col-md-3">
+            <div class="col-md-4">
                     <div class="panel panel-info animated bounceIn">
                         <div class="panel-heading">    <a href="game/{% game_id %}"> {% word %}</a></div>
                         <div class="panel-body">    <a href="game/{% game_id %}"> HighScore: {% winner %}  {% highScore %} on {% scoreDate %}</a></div>
